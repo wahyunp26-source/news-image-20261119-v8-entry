@@ -1,0 +1,197 @@
+[
+ {
+  "file": "header.png",
+  "x": 20,
+  "y": 14
+ },
+ {
+  "file": "regionbar.png",
+  "x": 20,
+  "y": 132
+ },
+ {
+  "file": "numbers.png",
+  "x": 20,
+  "y": 154
+ },
+ {
+  "file": "hours.png",
+  "x": 20,
+  "y": 205
+ },
+ {
+  "file": "hero1_cap.png",
+  "x": 20,
+  "y": 323
+ },
+ {
+  "file": "hero1_text.png",
+  "x": 20,
+  "y": 348
+ },
+ {
+  "file": "hero2_cap.png",
+  "x": 349,
+  "y": 323
+ },
+ {
+  "file": "hero2_text.png",
+  "x": 349,
+  "y": 348
+ },
+ {
+  "file": "hero3_cap.png",
+  "x": 678,
+  "y": 323
+ },
+ {
+  "file": "hero3_text.png",
+  "x": 678,
+  "y": 348
+ },
+ {
+  "file": "card4_text.png",
+  "x": 20,
+  "y": 556
+ },
+ {
+  "file": "card5_text.png",
+  "x": 218,
+  "y": 556
+ },
+ {
+  "file": "card6_text.png",
+  "x": 416,
+  "y": 556
+ },
+ {
+  "file": "card7_text.png",
+  "x": 614,
+  "y": 556
+ },
+ {
+  "file": "card8_text.png",
+  "x": 812,
+  "y": 556
+ },
+ {
+  "file": "card9_text.png",
+  "x": 20,
+  "y": 686
+ },
+ {
+  "file": "card10_text.png",
+  "x": 218,
+  "y": 686
+ },
+ {
+  "file": "card11_text.png",
+  "x": 416,
+  "y": 686
+ },
+ {
+  "file": "card12_text.png",
+  "x": 614,
+  "y": 686
+ },
+ {
+  "file": "card13_text.png",
+  "x": 812,
+  "y": 686
+ },
+ {
+  "file": "bottomhead.png",
+  "x": 20,
+  "y": 770
+ },
+ {
+  "file": "map.png",
+  "x": 20,
+  "y": 790
+ },
+ {
+  "file": "also.png",
+  "x": 320,
+  "y": 786
+ },
+ {
+  "file": "verdict.png",
+  "x": 680,
+  "y": 786
+ },
+ {
+  "file": "datecheck.png",
+  "x": 20,
+  "y": 956
+ },
+ {
+  "file": "footer.png",
+  "x": 20,
+  "y": 994
+ },
+ {
+  "file": "hero1.png",
+  "x": 20,
+  "y": 237
+ },
+ {
+  "file": "hero2.png",
+  "x": 349,
+  "y": 237
+ },
+ {
+  "file": "hero3.png",
+  "x": 678,
+  "y": 237
+ },
+ {
+  "file": "card4.png",
+  "x": 20,
+  "y": 502
+ },
+ {
+  "file": "card5.png",
+  "x": 218,
+  "y": 502
+ },
+ {
+  "file": "card6.png",
+  "x": 416,
+  "y": 502
+ },
+ {
+  "file": "card7.png",
+  "x": 614,
+  "y": 502
+ },
+ {
+  "file": "card8.png",
+  "x": 812,
+  "y": 502
+ },
+ {
+  "file": "card9.png",
+  "x": 20,
+  "y": 632
+ },
+ {
+  "file": "card10.png",
+  "x": 218,
+  "y": 632
+ },
+ {
+  "file": "card11.png",
+  "x": 416,
+  "y": 632
+ },
+ {
+  "file": "card12.png",
+  "x": 614,
+  "y": 632
+ },
+ {
+  "file": "card13.png",
+  "x": 812,
+  "y": 632
+ }
+]
