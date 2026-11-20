@@ -142,6 +142,41 @@ def write_png(path, rgb):
         f.write(png)
 
 
+def carve_map_gap(pg):
+    # v8 rev 1: the dotted world map's Eurasian landmass is one continuous
+    # band at the top — Europe and Asia visually merge into a single blob.
+    # Carve a narrow diagonal "Ural" gap through rows 4-9 of the dot grid
+    # (grid: 64 cols x 28 rows over the 280x150 map at page (20, 790)),
+    # drifting from col 35 at the top to col 31 at the bottom, so the two
+    # continents read as separate. Only dot pixels are repainted to PAPER:
+    # red story-pin pixels are skipped, so the pins are untouched.
+    MAP_X, MAP_Y = 20, 790
+    MAP_W, MAP_H = 280, 150
+    COLS, ROWS = 64, 28
+    cw, rh = MAP_W / COLS, MAP_H / ROWS
+    for ri in range(4, 10):
+        # gap centre column: 35.0 at row 4 -> 31.25 at row 9
+        lc = 35.0 - (ri - 4) * 0.75
+        c0 = round(lc - 0.5)
+        for ci in (c0, c0 + 1):
+            cx = (ci + 0.5) * cw
+            cy = (ri + 0.5) * rh
+            r = 2.8  # dot radius is 1.9 + antialiased fringe; 2.8 clears
+            # the whole dot (core + halo). Neighbouring dots are 4.375 px
+            # away, so at most a sub-pixel nibble on their gap-facing edge.
+            for yy in range(int(cy) - 3, int(cy) + 4):
+                for xx in range(int(cx) - 3, int(cx) + 4):
+                    if (xx - cx) ** 2 + (yy - cy) ** 2 > r * r:
+                        continue
+                    px, py = MAP_X + xx, MAP_Y + yy
+                    o = (py * W + px) * 3
+                    # skip red story-pin pixels; repaint everything else
+                    if pg.buf[o] > 150 and pg.buf[o + 1] < 120 \
+                            and pg.buf[o + 2] < 120:
+                        continue
+                    pg.buf[o], pg.buf[o + 1], pg.buf[o + 2] = PAPER
+
+
 def main():
     base = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
     with open(os.path.join(base, "manifest.json")) as f:
@@ -160,6 +195,8 @@ def main():
             data = f.read()
         w, h, rgba = decode_png(data)
         pg.paste(w, h, rgba, entry["x"], entry["y"])
+    # separate Europe from Asia on the dotted world map (see carve_map_gap)
+    carve_map_gap(pg)
     write_png("entry.png", pg.buf)
     print("page written")
 
