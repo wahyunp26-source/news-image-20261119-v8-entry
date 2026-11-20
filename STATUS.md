@@ -58,6 +58,14 @@
   14 skipped, 5 checked at submission. Same counts as v6/v7.
 - No git commands run in the repo; nothing committed.
 
+## Submit — 20 Nov 11:43 WIB — SUBMITTED ✅ (round 3/3, LAST slot)
+- Submission id: `01a1f744-9fb0-7663-9cfe-0cece4bcdea0`, title "The World in One Day", status `submitting` at receipt.
+- Claim code: `AF-MK7ES-2FFJ0-BGN73-PP568` (never claim a prize without Wahyu's word).
+- Repo: https://github.com/wahyunp26-source/news-image-20261119-v8-entry, commit `ec63431a57ddce826ea259393b894ca0aec2df8c` (revision: map-gap edit + STATUS + freshness.json).
+- Bundle: `~/workspace/makefun/news-image-20261119-v8-submit/v8-bundle.tar.gz`, sha256 `c51996312fb38a3de4839c6f4a98883425f82bd70ef34778aee2fe9a88188d97` (builder + reviser sessions, 2 usage rows, --no-discover --no-family).
+- Note: prizes not escrowed, entry went unsigned (keypair not needed). Pre-submit check: ok True, 0 failed (thinking_revised passed: main.py final content from 4 write/edit messages).
+- Result check: existing cron 5 Dec 09:00 WIB covers this competition; +10m/+30m status-check crons created after submit.
+
 ## Honest weaknesses left
 - Summit hero flags on the table are France/Japan/Germany, not US/China/
   Russia — tiny at display size (~10px), not legible as wrong, but not exact.
